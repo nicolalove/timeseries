@@ -1,16 +1,29 @@
 Package: timeseries
-Title: What the Package Does (One Line, Title Case)
+Title: Plotting grouped time series data
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Nicola",
+           family = "Love",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+           email = "nel36@zoology.ubc.ca")
+Description: The timeseries package is a data visualization package that currently only 
+            contains `qtseries()` function.The `qtseries()` function creates time series plots 
+            using `ggplot()`, where the x-axis is time (in years) and the y-axis the variable of 
+            interest.This package is useful in the initial stages of data exploration when users 
+            are trying to discover interesting temporal relationships in their data.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+Imports: 
+    ggplot2,
+    dplyr,
+    magrittr,
+    gapminder,
+    rlang
+Suggests: 
+    testthat,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
