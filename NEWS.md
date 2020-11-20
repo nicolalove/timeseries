@@ -4,6 +4,8 @@
 
 * Added @ImportFrom `dplyr` to include `pull()` function
 
+* Modified @param group to include character data as well
+
 :dancer:
 
 # timeseries 0.0.0.9000
