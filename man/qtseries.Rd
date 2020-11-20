@@ -21,7 +21,7 @@ qtseries(
 
 \item{voi}{A continuous, numeric vector stored in the data set \emph{data} (this is your variable of interest that might have interesting variations over time).}
 
-\item{group}{A factor vector that is used to group the numeric data, \emph{voi}, in the specified data set, \emph{data}.}
+\item{group}{A character or factor vector that is used to group the numeric data, \emph{voi}, in the specified data set, \emph{data}.}
 
 \item{round_values}{An optional argument that rounds the variable of interest (\emph{voi}) to 3 digits (default = FALSE).}
 
