@@ -10,6 +10,7 @@
 #' @param default_theme An optional argument that specifies a default theme: uses theme_minimal with bold plot title, legend title, and axis titles (default = TRUE).
 #'
 #' @importFrom ggplot2 ggplot aes geom_point geom_line labs theme_minimal theme element_text
+#' @importFrom dplyr filter pull
 #'
 #' @return A ggplot object (a plot) depicting the temporal dynamics of some variable (*voi*) grouped by a factor variable (*group*) from the specified data set (*data*).
 #'
@@ -26,9 +27,6 @@ qtseries <- function(data, time, voi, group, round_values = FALSE, verbose = FAL
     stop("Sorry, the time variable needs to be a numeric variable!")}
   if(!is.numeric(pull(data, {{ voi }}))){
     stop("Sorry, the variable of interest (dependent) needs to be a numeric variable!")
-  }
-  if(!is.factor(pull(data, {{ group }}))) {
-    stop("Sorry, the grouping variable needs to be a factor variable!")
   }
   if(verbose)cat("Plotting time series...")
   plot <- #if we want to round y-values
