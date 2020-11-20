@@ -22,6 +22,14 @@
 #'          dplyr::filter(continent == "Americas"),
 #'          year, lifeExp, country, verbose = TRUE)
 qtseries <- function(data, time, voi, group, round_values = FALSE, verbose = FALSE, default_theme = TRUE) {
+  if(!is.numeric(pull(data, {{ time }}))){
+    stop("Sorry, the time variable needs to be a numeric variable!")}
+  if(!is.numeric(pull(data, {{ voi }}))){
+    stop("Sorry, the variable of interest (dependent) needs to be a numeric variable!")
+  }
+  if(!is.factor(pull(data, {{ group }}))) {
+    stop("Sorry, the grouping variable needs to be a factor variable!")
+  }
   if(verbose)cat("Plotting time series...")
   plot <- #if we want to round y-values
     if(round_values){
