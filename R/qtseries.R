@@ -1,4 +1,3 @@
-
 #' Quick Time Series Plot
 #'
 #' @param data A data frame or tibble where the inputs *time*, *voi* and *group* are stored.

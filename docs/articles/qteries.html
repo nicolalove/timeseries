@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">timeseries</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
       </span>
     </div>
 
@@ -101,6 +101,7 @@
 <span class="co">#&gt; Warning: Removed 3 rows containing missing values (geom_point).</span>
 <span class="co">#&gt; Warning: Removed 3 row(s) containing missing values (geom_path).</span></code></pre></div>
 <p><img src="qteries_files/figure-html/example%201-1.png" width="700"></p>
+<p>Building a time series plot with the gapminder data set:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/jennybc/gapminder">gapminder</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://magrittr.tidyverse.org">magrittr</a></span><span class="op">)</span>
@@ -117,7 +118,17 @@
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">continent</span> <span class="op">==</span> <span class="st">"Europe"</span><span class="op">)</span><span class="op">%&gt;%</span>
   <span class="fu"><a href="../reference/qtseries.html">qtseries</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">pop</span>, <span class="va">country</span>, verbose <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
 <span class="co">#&gt; Plotting time series...Done labelling plot!...Done applying default theme aesthetics!</span></code></pre></div>
-<p><img src="qteries_files/figure-html/example%202-1.png" width="700"></p>
+<p><img src="qteries_files/figure-html/example%202-1.png" width="700"> Some errors you might see if <code>qtseries</code> is given non-numeric variables for the <em>time</em> or <em>voi</em> inputs:</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">gapminder</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">continent</span> <span class="op">==</span> <span class="st">"Europe"</span><span class="op">)</span><span class="op">%&gt;%</span>
+  <span class="fu"><a href="../reference/qtseries.html">qtseries</a></span><span class="op">(</span><span class="va">continent</span>, <span class="va">pop</span>, <span class="va">country</span>, verbose <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
+<span class="co">#&gt; Error in qtseries(., continent, pop, country, verbose = TRUE): Sorry, the time variable needs to be a numeric variable!</span>
+
+<span class="va">gapminder</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">continent</span> <span class="op">==</span> <span class="st">"Europe"</span><span class="op">)</span><span class="op">%&gt;%</span>
+  <span class="fu"><a href="../reference/qtseries.html">qtseries</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">country</span>, <span class="va">continent</span>, verbose <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
+<span class="co">#&gt; Error in qtseries(., year, country, continent, verbose = TRUE): Sorry, the variable of interest (dependent) needs to be a numeric variable!</span></code></pre></div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
