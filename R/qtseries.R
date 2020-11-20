@@ -4,7 +4,7 @@
 #' @param data A data frame or tibble where the inputs *time*, *voi* and *group* are stored.
 #' @param time A numeric vector that represents time (year, month, day), stored in the data set *data*.
 #' @param voi  A continuous, numeric vector stored in the data set *data* (this is your variable of interest that might have interesting variations over time).
-#' @param group A factor vector that is used to group the numeric data, *voi*, in the specified data set, *data*.
+#' @param group A character or factor vector that is used to group the numeric data, *voi*, in the specified data set, *data*.
 #' @param round_values An optional argument that rounds the variable of interest (*voi*) to 3 digits (default = FALSE).
 #' @param verbose An optional argument that that keeps the user up-to-date with the ongoing processes at each step of the graphing function (default = FALSE).
 #' @param default_theme An optional argument that specifies a default theme: uses theme_minimal with bold plot title, legend title, and axis titles (default = TRUE).
