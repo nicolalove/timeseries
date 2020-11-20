@@ -1,5 +1,11 @@
 # timeseries 0.1.0
 
+* Added `stop()` messages to the `qtseries()` function to force the *time* and *voi* inputs to be numeric
+
+* Added @ImportFrom `dplyr` to include `pull()` function
+
+:dancer:
+
 # timeseries 0.0.0.9000
 
 * Added a `NEWS.md` file to track changes to the package.
