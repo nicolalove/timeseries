@@ -21,7 +21,7 @@ patterns in data set.
 ## Installation
 
 ``` r
-devtools::install_github("nicolalove/timeseries")
+devtools::install_github("nicolalove/timeseries", build_vignettes = TRUE, ref = "v0.1.0")
 ```
 
 ## Package Development
