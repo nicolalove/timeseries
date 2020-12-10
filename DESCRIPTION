@@ -7,10 +7,12 @@ Authors@R:
            role = c("aut", "cre"),
            email = "nel36@zoology.ubc.ca")
 Description: The timeseries package is a data visualization package that currently only 
-            contains `qtseries()` function.The `qtseries()` function creates time series plots 
-            using `ggplot()`, where the x-axis is time (in years) and the y-axis the variable of 
-            interest.This package is useful in the initial stages of data exploration when users 
-            are trying to discover interesting temporal relationships in their data.
+            contains `qtseries()` and the `qstacktseries` functions.The `qtseries()` function creates a 
+            point & line time series plot using `ggplot()`, where the x-axis is time (in years) and the 
+            y-axis the variable of interest, grouped by a specified variable. The `qstacktseries` function creates a stacked area plot using 
+            `ggplot()`, where the x-axis is time (in years) and the y-axis the variable of interest, 
+            grouped by a specified variable. This package is useful in the initial stages of data exploration 
+            when users are trying to discover interesting temporal relationships in their data.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

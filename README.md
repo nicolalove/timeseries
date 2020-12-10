@@ -101,4 +101,11 @@ qtseries(testdf, year, temp, region, verbose = TRUE)
 #> Plotting time series...Done labelling plot!...Done applying default theme aesthetics!
 ```
 
-<img src="man/figures/README-example-1.png" width="100%" />
+<img src="man/figures/README-example qtseries function-1.png" width="100%" />
+
+``` r
+qstacktseries(testdf,year, temp, region, verbose = TRUE)
+#> Plotting time series...Done labelling plot!...Done applying default theme aesthetics!
+```
+
+<img src="man/figures/README-example qstacktseries function-1.png" width="100%" />

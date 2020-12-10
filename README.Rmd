@@ -62,7 +62,12 @@ testdf <- data.frame(year = rep(seq(from = 1980, to= 1990, 1), 3),
 ```
 
 
-```{r example}
+```{r example qtseries function}
 library(timeseries)
 qtseries(testdf, year, temp, region, verbose = TRUE)
 ```
+
+```{r example qstacktseries function}
+qstacktseries(testdf,year, temp, region, verbose = TRUE)
+```
+
