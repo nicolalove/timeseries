@@ -30,7 +30,7 @@ qtseries <- function(data, time, voi, group, round_values = FALSE, verbose = FAL
   if(verbose)cat("Plotting time series...")
   plot <- #if we want to round y-values
     if(round_values){
-      ggplot(data, aes({{time}}, round({{voi}}, 3), color = {{group}}))+
+      ggplot2::ggplot(data, aes({{time}}, round({{voi}}, 3), color = {{group}}))+
         geom_point()+
         geom_line(alpha = .4)+
         labs(y = deparse(substitute(voi)), title = "Quick Time Series Plot")

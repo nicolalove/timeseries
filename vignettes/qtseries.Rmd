@@ -1,8 +1,8 @@
 ---
-title: "qteries"
+title: "qtseries"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{qteries}
+  %\VignetteIndexEntry{qtseries}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

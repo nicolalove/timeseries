@@ -19,11 +19,11 @@ RoxygenNote: 7.1.1
 Imports: 
     ggplot2,
     dplyr,
-    magrittr,
-    gapminder,
-    rlang
+    magrittr
 Suggests: 
     testthat,
     knitr,
-    rmarkdown
+    rmarkdown,
+    gapminder,
+    rlang
 VignetteBuilder: knitr

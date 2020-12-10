@@ -25,3 +25,12 @@ gapminder %>%
   filter(continent == "Europe")%>%
   qtseries(year, pop, country, verbose = TRUE)
 
+## ----example 3: Errors, error=TRUE--------------------------------------------
+gapminder %>%
+  filter(continent == "Europe")%>%
+  qtseries(continent, pop, country, verbose = TRUE)
+
+gapminder %>%
+  filter(continent == "Europe")%>%
+  qtseries(year, country, continent, verbose = TRUE)
+
