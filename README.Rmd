@@ -48,6 +48,8 @@ As per the specifications of the rubric for Exercise 1.1, I will now explain how
 
 7. I built a vignette with `use_vignette()`, added the relevant information and examples, and then rendered the document using `build_vignette()`. 
 
+8. Steps 2-7 were taken for the `qstacktseries` function. 
+
 
 ## Basic Example
 

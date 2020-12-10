@@ -83,6 +83,8 @@ explain how I created each part of my R package using the `devtools` and
     information and examples, and then rendered the document using
     `build_vignette()`.
 
+8.  Steps 2-7 were taken for the `qstacktseries` function.
+
 ## Basic Example
 
 Building a time series plot with a dummy data set
