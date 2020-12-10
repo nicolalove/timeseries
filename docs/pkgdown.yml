@@ -2,6 +2,6 @@ pandoc: 2.7.3
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
-  qteries: qteries.html
-last_built: 2020-11-20T20:23Z
+  qtseries: qtseries.html
+last_built: 2020-12-10T21:33Z
 
