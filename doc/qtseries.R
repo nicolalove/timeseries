@@ -6,6 +6,8 @@ knitr::opts_chunk$set(
 
 ## ----setup--------------------------------------------------------------------
 library(timeseries)
+library(gapminder)
+library(dplyr)
 
 ## ----dummy dataset setup------------------------------------------------------
 testdf <- data.frame(year = rep(seq(from = 1980, to= 1990, 1), 3),
@@ -18,19 +20,13 @@ testdf <- data.frame(year = rep(seq(from = 1980, to= 1990, 1), 3),
 qtseries(testdf, year, daysofsun, region, verbose = TRUE)
 
 ## ----example 2----------------------------------------------------------------
-library(gapminder)
-library(magrittr)
-library(dplyr)
-gapminder %>%
-  filter(continent == "Europe")%>%
-  qtseries(year, pop, country, verbose = TRUE)
+qtseries(gapminder %>%
+            filter(continent == "Europe"), year, pop, country, verbose = TRUE)
 
 ## ----example 3: Errors, error=TRUE--------------------------------------------
-gapminder %>%
-  filter(continent == "Europe")%>%
-  qtseries(continent, pop, country, verbose = TRUE)
+qtseries(gapminder %>%
+            filter(continent == "Americas"),continent, pop, country, verbose = TRUE)
 
-gapminder %>%
-  filter(continent == "Europe")%>%
-  qtseries(year, country, continent, verbose = TRUE)
+qtseries(gapminder %>%
+              filter(continent == "Europe"),year, country, continent, verbose = TRUE)
 

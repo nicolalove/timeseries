@@ -7,14 +7,14 @@ test_that("Quick Time Series Check", {
                        region = c(rep("A",11), rep("B", 11), rep("C", 11)))
 
   # test that the data is grouped as expected, testing with NA's present & all arguments = TRUE
-  expect_match("state",as.character(rlang::get_expr(qtseries(testdf, year,daysofsun,state, round_values = TRUE, verbose = TRUE)$mapping$colour)))
+  expect_match("region",as.character(rlang::get_expr(qtseries(testdf, year,daysofsun,region, round_values = TRUE, verbose = FALSE )$mapping$colour)))
   cat(" Expected grouping & extra arguments working? -> Yes!")
 
   # test that the output is a ggplot object, testing without NA's present & all arguments = FALSE
-  expect_identical(class(qtseries(testdf, year,rainfall, state, default_theme = FALSE))[2], "ggplot")
+  expect_identical(class(qtseries(testdf, year,rainfall, region, default_theme = FALSE))[2], "ggplot")
   cat("...Expected Object Output (ggplot)? -> Yes!")
 
   # test that the first layer is a geom_point layer
-  expect_true("GeomPoint" %in% class(qtseries(testdf, year,temp, state)$layers[[1]]$geom))
+  expect_true("GeomPoint" %in% class(qtseries(testdf, year,temp, region)$layers[[1]]$geom))
   cat("...Expected Geom_Point Layer? -> Yes!")
 })
