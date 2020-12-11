@@ -1,3 +1,18 @@
+# timeseries 0.2.0
+
+:rocket: :alarm_clock: :rocket:
+
+* Added a new function, `qstacktseries`, a stacked area plot
+    + updated documentation, readme and description files accordingly
+    + created a vignette for `qstacktseries`
+    + developed tests for `qstacktseries`
+    
+* Fixed the typo in the name of the `qtseries ` vignette - vignette now has the same name as the function
+* Added `build_vignettes = TRUE` and `ref = "v0.2.0"` to the installation command in the package `README`
+* Moved the `gapminder` and `rlang` under *suggests* from *imports* (as they are only used in the tests)
+
+Take a look at the `qstacktseries` vignette to get a sense of how this function could be used.
+
 # timeseries 0.1.0
 
 * Added `stop()` messages to the `qtseries()` function to force the *time* and *voi* inputs to be numeric

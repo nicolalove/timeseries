@@ -27,7 +27,7 @@ The goal of `timeseries` is to speed up the initial stages of data exploration b
 ## Installation
 
 ``` r
-devtools::install_github("nicolalove/timeseries", build_vignettes = TRUE, ref = "v0.1.0")
+devtools::install_github("nicolalove/timeseries", build_vignettes = TRUE, ref = "v0.2.0")
 ```
 
 ## Package Development 

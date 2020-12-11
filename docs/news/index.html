@@ -71,7 +71,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">timeseries</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
       </span>
     </div>
 
@@ -93,6 +93,9 @@
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/qstacktseries.html">qstacktseries</a>
+    </li>
     <li>
       <a href="../articles/qtseries.html">qtseries</a>
     </li>
@@ -121,6 +124,27 @@
       
     </div>
 
+    <div id="timeseries-020" class="section level1">
+<h1 class="page-header" data-toc-text="0.2.0">
+<a href="#timeseries-020" class="anchor"></a>timeseries 0.2.0</h1>
+<p><span class="emoji" data-emoji="rocket">🚀</span> <span class="emoji" data-emoji="alarm_clock">⏰</span> <span class="emoji" data-emoji="rocket">🚀</span></p>
+<ul>
+<li>Added a new function, <code>qstacktseries</code>, a stacked area plot
+<ul>
+<li>updated documentation, readme and description files accordingly</li>
+<li>created a vignette for <code>qstacktseries</code>
+</li>
+<li>developed tests for <code>qstacktseries</code>
+</li>
+</ul>
+</li>
+<li>Fixed the typo in the name of the <code>qtseries</code> vignette - vignette now has the same name as the function</li>
+<li>Added <code>build_vignettes = TRUE</code> and <code>ref = "v0.2.0"</code> to the installation command in the package <code>README</code>
+</li>
+<li>Moved the <code>gapminder</code> and <code>rlang</code> under <em>suggests</em> from <em>imports</em> (as they are only used in the tests)</li>
+</ul>
+<p>Take a look at the <code>qstacktseries</code> vignette to get a sense of how this function could be used.</p>
+</div>
     <div id="timeseries-010" class="section level1">
 <h1 class="page-header" data-toc-text="0.1.0">
 <a href="#timeseries-010" class="anchor"></a>timeseries 0.1.0</h1>
